@@ -5,16 +5,21 @@
 
 'use client';
 
+import Image from "next/image";
 import { ReactNode } from 'react';
 
 interface ChapterCardProps {
   title: string;
+  image?: string;
+  onClick?: () => void;
   children: ReactNode;
   variant?: 'default' | 'highlight';
 }
 
 export default function ChapterCard({
   title,
+  image,
+  onClick,
   children,
   variant = 'default',
 }: ChapterCardProps) {

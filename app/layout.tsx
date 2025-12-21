@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Merriweather, Lato } from 'next/font/google';
 import './globals.css';
-import ClientLayout from '@/components/ClientLayout';
+import Header from '@/components/Header';
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -16,8 +16,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'BSCCT907 - การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ',
-  description: 'Preparation for Professional Experience in Information Technology',
+  title: 'Portfolio & Resume',
+  description: 'My professional portfolio and resume',
 };
 
 export default function RootLayout({
@@ -28,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="th" className={`${merriweather.variable} ${lato.variable}`}>
       <body className="font-sans">
-        <ClientLayout>{children}</ClientLayout>
+        <Header />
+        {children}
       </body>
     </html>
   );

@@ -4,12 +4,9 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Mail, Github, Linkedin } from 'lucide-react';
 import ChapterCard from '@/components/ChapterCard';
-import { useState } from "react";
-
 
 export default function ProfilePage() {
   const router = useRouter();
-  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
