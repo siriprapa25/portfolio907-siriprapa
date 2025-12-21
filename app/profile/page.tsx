@@ -32,10 +32,10 @@ export default function ProfilePage() {
                 {/* Info */}
                 <div className="flex-1">
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-                    Your Name
+                    Siriprapa Horadee
                   </h1>
                   <p className="text-xl text-primary font-semibold mb-4">
-                    Full Stack Developer
+                    Information Technology • IT
                   </p>
                   <p className="text-foreground/70 text-lg mb-6">
                     Passionate about creating beautiful and functional web applications.
@@ -79,10 +79,10 @@ export default function ProfilePage() {
             <h2 className="text-3xl font-bold text-foreground mb-8">About Me</h2>
             <ChapterCard title="Personal Information">
               <p className="mb-4">
-                I'm a dedicated developer with a passion for creating elegant solutions to complex problems.
-              </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies and contributing to open-source projects.
+               I am a passionate developer who enjoys building modern web
+              applications using React, Next.js, Tailwind CSS, and UI/UX
+              design. I love creating clean, minimal, and enjoyable user
+              experiences.
               </p>
             </ChapterCard>
           </div>
@@ -90,18 +90,33 @@ export default function ProfilePage() {
       </section>
 
       {/* Education Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Education</h2>
-            <ChapterCard title="Bachelor of Science in Computer Science">
-              <p className="font-semibold text-foreground mb-2">University Name</p>
-              <p className="text-foreground/70 mb-2">Graduated: 2022</p>
-              <p>Focused on software engineering and web development.</p>
-            </ChapterCard>
-          </div>
+<section className="py-16">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-3xl font-bold text-foreground mb-8">Education</h2>
+
+      <ChapterCard title="">
+        {/* ระดับมัธยม */}
+        <div className="mb-6">
+          <p className="font-semibold text-foreground mb-1">ระดับมัธยมศึกษาตอนปลาย</p>
+          <p className="text-foreground/70 mb-2">2563 - 2566 | สายวิทย์‑คณิต </p>
+          <p className="text-foreground/80">โรงเรียนเกาะคาวิทยาคม</p>
         </div>
-      </section>
+
+        {/* เส้นแบ่ง (optional) */}
+        <hr className="border-border my-4" />
+
+        {/* ระดับมหาวิทยาลัย */}
+        <div>
+          <p className="font-semibold text-foreground mb-1">ระดับปริญญาตรี</p>
+          <p className="text-foreground/70 mb-2">2566 - 2568 | Information Technology</p>
+          <p className="text-foreground/80">มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา ลำปาง</p>
+        </div>
+      </ChapterCard>
+    </div>
+  </div>
+</section>
+
 
       {/* Skills Section */}
       <section className="py-16 bg-secondary/30">
@@ -118,13 +133,13 @@ export default function ProfilePage() {
                     <div>
                       <p className="font-semibold text-foreground mb-1">JavaScript / TypeScript</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '90%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
                       </div>
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">React</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '85%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
                       </div>
                     </div>
                   </div>
@@ -135,13 +150,13 @@ export default function ProfilePage() {
                     <div>
                       <p className="font-semibold text-foreground mb-1">Node.js</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '80%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
                       </div>
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Python</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '75%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
                       </div>
                     </div>
                   </div>

@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from 'lucide-react';
-import Header from "@/components/Header";
-import ChapterCard from "@/components/ChapterCard";
+
 
 export default function ProfilePage() {
   const router = useRouter();
@@ -32,6 +30,13 @@ export default function ProfilePage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
+                onClick={() => router.push("/coures")}
+                className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 group"
+              >
+                View Coures
+              </button>
+
+              <button
                 onClick={() => router.push("/profile")}
                 className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 group"
               >
@@ -40,14 +45,14 @@ export default function ProfilePage() {
               </button>
               <button
                 onClick={() => router.push("/certificates")}
-                className="px-8 py-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary/10 transition-all hover:scale-105"
+                className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 group"
               >
                 View Certificates
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </section>          
     </div>
   );
 }

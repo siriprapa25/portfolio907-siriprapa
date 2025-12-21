@@ -5,12 +5,10 @@
 
 'use client';
 
-import Image from "next/image";
 import { ReactNode } from 'react';
 
 interface ChapterCardProps {
   title: string;
-  image?: string;
   onClick?: () => void;
   children: ReactNode;
   variant?: 'default' | 'highlight';
@@ -18,7 +16,6 @@ interface ChapterCardProps {
 
 export default function ChapterCard({
   title,
-  image,
   onClick,
   children,
   variant = 'default',
@@ -30,6 +27,7 @@ export default function ChapterCard({
 
   return (
     <div
+      onClick={onClick}
       className={`
         rounded-2xl border p-6 transition-all duration-300
         hover:scale-105 hover:-translate-y-1

@@ -1,6 +1,5 @@
 'use client';
 
-import Header from '@/components/Header';
 import ChapterCard from '@/components/ChapterCard';
 import { Award, Calendar, Building2 } from 'lucide-react';
 
@@ -39,7 +38,6 @@ const certificates: Certificate[] = [
 export default function Certificates() {
   return (
     <>
-      <Header />
 
       <main className="min-h-screen bg-background">
         {/* Header Section */}
