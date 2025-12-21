@@ -16,8 +16,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio & Resume',
-  description: 'My professional portfolio and resume',
+  title: 'BSCCT907 - การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ',
+  description: 'Preparation for Professional Experience in Information Technology',
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${merriweather.variable} ${lato.variable}`}>
+    <html lang="th" className={`${merriweather.variable} ${lato.variable}`}>
       <body className="font-sans">
         <ClientLayout>{children}</ClientLayout>
       </body>

@@ -1,13 +1,12 @@
 "use client";
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ArrowRight } from 'lucide-react';
-import { useRouter } from 'next/navigation'; 
+import Header from "@/components/Header";
+import ChapterCard from "@/components/ChapterCard";
 
-interface HomeProps {
-  onNavigate?: (section: string) => void;
-}
-
-export default function Profile({ onNavigate }: HomeProps) {
+export default function ProfilePage() {
   const router = useRouter();
 
   return (
