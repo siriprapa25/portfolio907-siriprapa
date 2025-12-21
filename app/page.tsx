@@ -18,7 +18,7 @@ export default function ProfilePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Hello, I'm <span className="text-primary">Your Name</span>
+              Hello, I'm <span className="text-primary">Siriprapa</span>
             </h1>
             <p className="text-xl text-foreground/70 mb-8">
               Full Stack Developer & Designer
@@ -30,10 +30,11 @@ export default function ProfilePage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => router.push("/coures")}
+                onClick={() => router.push("/courses")}
                 className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 group"
               >
                 View Coures
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
@@ -48,6 +49,7 @@ export default function ProfilePage() {
                 className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold hover:shadow-lg transition-all hover:scale-105 flex items-center justify-center gap-2 group"
               >
                 View Certificates
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
