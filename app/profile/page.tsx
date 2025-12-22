@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Mail, Github, Linkedin } from 'lucide-react';
 import ChapterCard from '@/components/ChapterCard';
 
+
+
 export default function ProfilePage() {
   const router = useRouter();
 
@@ -24,7 +26,13 @@ export default function ProfilePage() {
                 <div className="flex-shrink-0">
                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1">
                     <div className="w-full h-full rounded-full bg-secondary flex items-center justify-center text-5xl">
-                      👨‍💻
+                    <Image
+                      src="/profile.jpg" // ใส่ชื่อไฟล์รูปของคุณใน public folder
+                       alt=""
+                       width={160}       // ปรับขนาดตามต้องการ
+                        height={160}
+                        className="object-cover w-full h-full"
+                        />
                     </div>
                   </div>
                 </div>
@@ -203,6 +211,22 @@ export default function ProfilePage() {
           </div>
         </div>
       </section>
+
+       {/* ================= FOOTER ================= */}
+      <footer className="py-8 border-t border-border">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-foreground/60 mb-4">
+            © 2024 Siriprapa. All rights reserved.
+          </p>
+
+          <div className="flex justify-center gap-6">
+            <a className="hover:text-primary" href="#">GitHub</a>
+            <a className="hover:text-primary" href="#">LinkedIn</a>
+            <a className="hover:text-primary" href="#">Twitter</a>
+            <a className="hover:text-primary" href="#">Email</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -33,7 +33,7 @@ export default function ProfilePage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Hello, I'm <span className="text-primary">Siriprapa</span>
+              Hello, I'm <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Siriprapa</span>
             </h1>
 
             <p className="text-xl text-foreground/70 mb-8">
