@@ -10,6 +10,7 @@ import { ReactNode } from 'react';
 interface ChapterCardProps {
   title: string;
   onClick?: () => void;
+  icon?: ReactNode;
   children: ReactNode;
   variant?: 'default' | 'highlight';
 }
@@ -17,6 +18,7 @@ interface ChapterCardProps {
 export default function ChapterCard({
   title,
   onClick,
+  icon,
   children,
   variant = 'default',
 }: ChapterCardProps) {
