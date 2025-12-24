@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import ChapterCard from "@/components/ChapterCard";
 
 type FileItem = {
   name: string;
@@ -16,47 +15,34 @@ export default function FilesPage() {
   /* ================== ไฟล์ตัวอย่าง ================== */
   const sampleFiles: FileItem[] = [
     {
-      name: "การต่ออุปกรณ์ไฟฟ้า.pdf",
-      url: "/sample.pdf",
+      name: "การเตรียมความพร้อมฝึกประสบการณ์",
+      url: "/uploads/chapter/lesson.pdf",
       type: "application/pdf",
       isSample: true,
     },
     {
       name: "ตัวอย่างรูปภาพกิจกรรม.jpg",
-      url: "/sample-image.jpg",
-      type: "image/jpeg",
+      url: "/uploads/chapter/lesson.pdf",
+      type: "image/png",
       isSample: true,
     },
     {
-      name: "ตัวอย่างวิดีโอการเรียน.mp4",
-      url: "/sample-video.mp4",
+      name: "วิดีโอสื่อการสอนการต่อวงจรไฟฟ้า",
+      url: "/uploads/chapter/video.mp4",
       type: "video/mp4",
       isSample: true,
     },
   ];
 
-  /* ================== ไฟล์ที่ผู้ใช้เพิ่ม ================== */
-  const [uploadedFiles, setUploadedFiles] = useState<FileItem[]>([]);
+  /* ================== State ================== */
+  const [files, setFiles] = useState<FileItem[]>([]);
 
-  /* โหลดจาก localStorage */
+  /* ================== โหลดข้อมูล ================== */
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      try {
-        setUploadedFiles(JSON.parse(stored));
-      } catch {
-        setUploadedFiles([]);
-      }
-    }
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const uploadedFiles = saved ? JSON.parse(saved) : [];
+    setFiles([...sampleFiles, ...uploadedFiles]);
   }, []);
-
-  /* บันทึกลง localStorage */
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(uploadedFiles));
-  }, [uploadedFiles]);
-
-  /* รวมไฟล์ทั้งหมด */
-  const files = [...sampleFiles, ...uploadedFiles];
 
   /* ================== Upload ================== */
   const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -68,26 +54,24 @@ export default function FilesPage() {
       type: file.type,
     }));
 
-    setUploadedFiles((prev) => [...prev, ...newFiles]);
+    const updated = [...files, ...newFiles];
+    setFiles(updated);
+
+    const onlyUploaded = updated.filter((f) => !f.isSample);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(onlyUploaded));
   };
 
   /* ================== Delete ================== */
   const handleDelete = (index: number) => {
-    const file = files[index];
+    const updated = files.filter((_, i) => i !== index);
+    setFiles(updated);
 
-    if (file.isSample) {
-      alert("ไฟล์ตัวอย่างไม่สามารถลบได้");
-      return;
-    }
-
-    if (!confirm("ต้องการลบไฟล์นี้หรือไม่?")) return;
-
-    const realIndex = index - sampleFiles.length;
-    setUploadedFiles((prev) => prev.filter((_, i) => i !== realIndex));
+    const onlyUploaded = updated.filter((f) => !f.isSample);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(onlyUploaded));
   };
 
   return (
-    <main className="min-h-screen bg-[#0d0d1f] text-white pt-20 px-6">
+    <main className="min-h-screen bg-background pt-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-10 text-center">
           ไฟล์งานและสื่อประกอบการเรียน
@@ -146,10 +130,7 @@ export default function FilesPage() {
               )}
 
               {file.type === "application/pdf" && (
-                <iframe
-                  src={file.url}
-                  className="w-full h-64 rounded-lg"
-                />
+                <iframe src={file.url} className="w-full h-64 rounded-lg" />
               )}
             </div>
           ))}
