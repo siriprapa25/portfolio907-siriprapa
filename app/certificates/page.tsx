@@ -23,7 +23,7 @@ const certificates: Certificate[] = [
   },
   {
     id: '2',
-    title: 'Full Stack ',
+    title: 'Full Stack',
     image: "/certificates/cert2.png",
     date: 'January 2024',
   },
