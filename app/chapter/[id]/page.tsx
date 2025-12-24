@@ -44,22 +44,6 @@ export default function FilesPage() {
     setFiles([...sampleFiles, ...uploadedFiles]);
   }, []);
 
-  /* ================== Upload ================== */
-  const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (!e.target.files) return;
-
-    const newFiles: FileItem[] = Array.from(e.target.files).map((file) => ({
-      name: file.name,
-      url: URL.createObjectURL(file),
-      type: file.type,
-    }));
-
-    const updated = [...files, ...newFiles];
-    setFiles(updated);
-
-    const onlyUploaded = updated.filter((f) => !f.isSample);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(onlyUploaded));
-  };
 
   /* ================== Delete ================== */
   const handleDelete = (index: number) => {
@@ -72,22 +56,10 @@ export default function FilesPage() {
 
   return (
     <main className="min-h-screen bg-background pt-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold mb-10 text-center">
-          ไฟล์งานและสื่อประกอบการเรียน
-        </h1>
-
-        {/* Upload */}
-        <input
-          type="file"
-          multiple
-          onChange={handleUpload}
-          className="mb-10 block w-full text-sm
-            file:mr-4 file:py-2 file:px-4
-            file:rounded-lg file:border-0
-            file:bg-purple-600 file:text-white
-            hover:file:bg-purple-700"
-        />
+      <div className="max-w-6xl mx-auto ">
+         <h1 className="text-4xl  text-5xl font-bold text-center mb-1">
+              ไฟล์งานและสื่อประกอบการเรียน
+            </h1>
 
         {/* Preview */}
         <div className="grid md:grid-cols-2 gap-6">
@@ -136,6 +108,22 @@ export default function FilesPage() {
           ))}
         </div>
       </div>
+      
+            {/* Footer */}
+      <footer className="py-8 border-t border-border">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-foreground/60 mb-4">
+            © 2024 Siriprapa. All rights reserved.
+          </p>
+          <div className="flex justify-center gap-6">
+            <a className="hover:text-primary" href="#">GitHub</a>
+            <a className="hover:text-primary" href="#">LinkedIn</a>
+            <a className="hover:text-primary" href="#">Twitter</a>
+            <a className="hover:text-primary" href="#">Email</a>
+          </div>
+        </div>
+      </footer>
+
     </main>
   );
 }
