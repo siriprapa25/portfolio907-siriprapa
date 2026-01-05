@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Download, Github, Linkedin } from 'lucide-react';
 import ChapterCard from '@/components/ChapterCard';
 
 
@@ -51,6 +51,16 @@ export default function ProfilePage() {
 
                   {/* Contact Links */}
                   <div className="flex flex-wrap gap-3">
+                    <a
+                      href="/cv.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:shadow-lg transition-all hover:scale-105"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download CV
+                    </a>
+                    
                     <a
                       href="mailto:your.email@example.com"
                       className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:shadow-lg transition-all hover:scale-105"

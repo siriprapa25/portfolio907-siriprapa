@@ -108,7 +108,6 @@ export default function FilesPage() {
           ))}
         </div>
       </div>
-      
             {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center">
@@ -123,7 +122,7 @@ export default function FilesPage() {
           </div>
         </div>
       </footer>
-
+      
     </main>
   );
 }
