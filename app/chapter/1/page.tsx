@@ -66,7 +66,9 @@ export default function FilesPage() {
           {files.map((file, index) => (
             <div
               key={index}
-              className="relative bg-white/5 border border-white/10 rounded-xl p-4"
+              className="relative bg-white border border-gray-200 
+             rounded-xl p-4 shadow-md hover:shadow-lg 
+             transition"
             >
               {!file.isSample && (
                 <button
@@ -89,7 +91,7 @@ export default function FilesPage() {
                 <video
                   src={file.url}
                   controls
-                  className="rounded-lg w-full max-h-64"
+                  className="rounded-lg w-full mb-2 max-h-64"
                 />
               )}
 
@@ -102,7 +104,7 @@ export default function FilesPage() {
         <a
           href={file.url}
           target="_blank"
-          className="block text-right mt-2 text-blue-500 underline"
+          className="block text-right mt-2 text-back-500 underline"
          >
              ⛶
         </a>
