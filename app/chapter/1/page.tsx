@@ -16,19 +16,19 @@ export default function FilesPage() {
   const sampleFiles: FileItem[] = [
     {
       name: "การเตรียมความพร้อมฝึกประสบการณ์",
-      url: "/uploads/chapter/lesson.pdf",
+      url: "/uploads/chapter1/lesson.pdf",
       type: "application/pdf",
       isSample: true,
     },
     {
       name: "ตัวอย่างรูปภาพกิจกรรม.jpg",
-      url: "/uploads/chapter/lesson.pdf",
+      url: "/uploads/chapter1/lesson.pdf",
       type: "image/png",
       isSample: true,
     },
     {
       name: "วิดีโอสื่อการสอนการต่อวงจรไฟฟ้า",
-      url: "/uploads/chapter/video.mp4",
+      url: "/uploads/chapter1/video.mp4",
       type: "video/mp4",
       isSample: true,
     },
