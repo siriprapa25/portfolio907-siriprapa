@@ -77,14 +77,6 @@ export default function FilesPage() {
                 </button>
               )}
 
-              <p className="text-sm mb-3 font-medium">
-                {file.name}
-                {file.isSample && (
-                  <span className="ml-2 text-xs text-green-400">
-                    (ตัวอย่าง)
-                  </span>
-                )}
-              </p>
 
               {file.type.startsWith("image") && (
                 <img
@@ -101,14 +93,29 @@ export default function FilesPage() {
                 />
               )}
 
-              {file.type === "application/pdf" && (
-                <iframe src={file.url} className="w-full h-64 rounded-lg" />
-              )}
+        {file.type === "application/pdf" && (
+      <div>
+        <iframe
+            src={file.url}
+            className="w-full h-64 rounded-lg"
+          />
+        <a
+          href={file.url}
+          target="_blank"
+          className="block text-right mt-2 text-blue-500 underline"
+         >
+             ⛶
+        </a>
+      </div>
+     )}
+
             </div>
           ))}
         </div>
       </div>
-            {/* Footer */}
+
+      
+     {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <p className="text-foreground/60 mb-4">
