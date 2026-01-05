@@ -44,7 +44,6 @@ export default function FilesPage() {
     setFiles([...sampleFiles, ...uploadedFiles]);
   }, []);
 
-
   /* ================== Delete ================== */
   const handleDelete = (index: number) => {
     const updated = files.filter((_, i) => i !== index);
@@ -56,10 +55,10 @@ export default function FilesPage() {
 
   return (
     <main className="min-h-screen bg-background pt-20 px-6">
-      <div className="max-w-6xl mx-auto ">
-         <h1 className="text-4xl  text-5xl font-bold text-center mb-1">
-              ไฟล์งานและสื่อประกอบการเรียน
-            </h1>
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-8">
+          ไฟล์งานและสื่อประกอบการเรียน
+        </h1>
 
         {/* Preview */}
         <div className="grid md:grid-cols-2 gap-6">
@@ -67,9 +66,19 @@ export default function FilesPage() {
             <div
               key={index}
               className="relative bg-white border border-gray-200 
-             rounded-xl p-4 shadow-md hover:shadow-lg 
-             transition"
+                         rounded-xl p-4 shadow-md hover:shadow-lg transition"
             >
+              {/* ชื่อไฟล์ */}
+              <h2 className="text-lg font-semibold mb-2 text-gray-800">
+                {file.name}
+                {file.isSample && (
+                  <span className="ml-2 text-xs text-green-600">
+                    
+                  </span>
+                )}
+              </h2>
+
+              {/* ปุ่มลบไฟล์ */}
               {!file.isSample && (
                 <button
                   onClick={() => handleDelete(index)}
@@ -79,7 +88,7 @@ export default function FilesPage() {
                 </button>
               )}
 
-
+              {/* แสดงไฟล์ประเภทต่าง ๆ */}
               {file.type.startsWith("image") && (
                 <img
                   src={file.url}
@@ -95,30 +104,31 @@ export default function FilesPage() {
                 />
               )}
 
-        {file.type === "application/pdf" && (
-      <div>
-        <iframe
-            src={file.url}
-            className="w-full h-64 rounded-lg"
-          />
-        <a
-          href={file.url}
-          target="_blank"
-          className="block text-right mt-2 text-back-500 underline"
-         >
-             ⛶
-        </a>
-      </div>
-     )}
-
+              {file.type === "application/pdf" && (
+                <div className="relative">
+                  <iframe
+                    src={file.url}
+                    className="w-full h-64 rounded-lg"
+                  />
+                  {/* ปุ่ม ⛶ ขยายเต็มจอ */}
+                  <a
+                    href={file.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded hover:bg-black transition"
+                    title="เปิดเต็มหน้าจอ"
+                  >
+                    ⛶
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
 
-      
-     {/* Footer */}
-      <footer className="py-8 border-t border-border">
+      {/* Footer */}
+      <footer className="py-8 border-t border-border mt-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-foreground/60 mb-4">
             © 2024 Siriprapa. All rights reserved.
@@ -131,7 +141,6 @@ export default function FilesPage() {
           </div>
         </div>
       </footer>
-      
     </main>
   );
 }
