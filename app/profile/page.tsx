@@ -25,13 +25,13 @@ export default function ProfilePage() {
                 {/* Avatar */}
                 <div className="flex-shrink-0">
                   <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-accent p-1">
-                    <div className="w-full h-full rounded-full bg-secondary flex items-center justify-center text-5xl">
+                    <div className="w-full h-full rounded-full bg-secondary overflow-hidden">
                     <Image
-                      src="/profile.jpg" // ใส่ชื่อไฟล์รูปของคุณใน public folder
+                      src="/profile.png" // ใส่ชื่อไฟล์รูปของคุณใน public folder
                        alt=""
-                       width={160}       // ปรับขนาดตามต้องการ
-                        height={160}
-                        className="object-cover w-full h-full"
+                       width={180}       // ปรับขนาดตามต้องการ
+                        height={180}
+                        className="w-full h-full object-cover"
                         />
                     </div>
                   </div>
@@ -149,15 +149,15 @@ export default function ProfilePage() {
                 <ChapterCard title="Frontend">
                   <div className="space-y-3">
                     <div>
-                      <p className="font-semibold text-foreground mb-1">JavaScript / TypeScript</p>
+                      <p className="font-semibold text-foreground mb-1">HTML</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '50%' }} />
                       </div>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground mb-1">React</p>
+                      <p className="font-semibold text-foreground mb-1">CSS</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '50%' }} />
                       </div>
                     </div>
                   </div>
@@ -168,13 +168,47 @@ export default function ProfilePage() {
                     <div>
                       <p className="font-semibold text-foreground mb-1">Node.js</p>
                       <div className="w-full bg-border rounded-full h-2">
-                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '50%' }} />
                       </div>
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Python</p>
                       <div className="w-full bg-border rounded-full h-2">
                         <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
+                      </div>
+                    </div>
+                  </div>
+                </ChapterCard>
+
+                <ChapterCard title="Frontend">
+                  <div className="space-y-3">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">JavaScript / TypeScript</p>
+                      <div className="w-full bg-border rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '40%' }} />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">React</p>
+                      <div className="w-full bg-border rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '20%' }} />
+                      </div>
+                    </div>
+                  </div>
+                </ChapterCard>
+
+                <ChapterCard title="Backend">
+                  <div className="space-y-3">
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">PHP</p>
+                      <div className="w-full bg-border rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '50%' }} />
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground mb-1">MySQL</p>
+                      <div className="w-full bg-border rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{ width: '30%' }} />
                       </div>
                     </div>
                   </div>
@@ -187,7 +221,7 @@ export default function ProfilePage() {
               <h3 className="text-2xl font-bold text-foreground mb-6">Technical Skills</h3>
               <ChapterCard title="Tools & Technologies" variant="highlight">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {['Git', 'Docker', 'REST APIs', 'Next.js', 'MongoDB', 'PostgreSQL'].map((skill) => (
+                  {['Git', 'Figma', 'Canva', 'Next.js', 'Word', 'Excel', 'Power BI','MongoDB', 'PostgreSQL'].map((skill) => (
                     <div
                       key={skill}
                       className="px-4 py-2 rounded-lg bg-primary/10 text-primary font-medium text-center"

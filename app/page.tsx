@@ -79,36 +79,6 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* ================= WHAT I DO ================= */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-
-            <h2 className="text-4xl font-bold text-center mb-12">
-              What I Do
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <ChapterCard title="Web Development">
-                Building responsive, performant web applications using React,
-                Next.js, and TypeScript.
-              </ChapterCard>
-
-              <ChapterCard title="UI / UX Design">
-                Creating intuitive and beautiful interfaces with a strong
-                focus on accessibility and user experience.
-              </ChapterCard>
-
-              <ChapterCard title="Full Stack Solutions">
-                Developing complete solutions including databases, APIs,
-                and deployment.
-              </ChapterCard>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ================= FOOTER ================= */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center">

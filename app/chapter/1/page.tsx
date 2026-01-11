@@ -15,15 +15,21 @@ export default function FilesPage() {
   /* ================== ไฟล์ตัวอย่าง ================== */
   const sampleFiles: FileItem[] = [
     {
-      name: "การเตรียมความพร้อมฝึกประสบการณ์",
-      url: "/uploads/chapter1/lesson.pdf",
+      name: "คำอธิอบายรายวิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยี",
+      url: "/uploads/chapter1/คำอธิอบายรายวิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยี.pdf",
       type: "application/pdf",
       isSample: true,
     },
     {
-      name: "ตัวอย่างรูปภาพกิจกรรม.jpg",
-      url: "/uploads/chapter1/lesson.pdf",
-      type: "image/png",
+      name: "การเตรียมความพร้อมฝึกประสบการณ์",
+      url: "/uploads/chapter1/02-เตรียมความพร้อมฝึกประสบการณ์วิชาชีพ WiFi.pdf",
+      type: "application/pdf",
+      isSample: true,
+    },
+    {
+      name: "ประเภทของหน่วยงาน",
+      url: "/uploads/chapter1/ประเภทของหน่วยงาน.pdf",
+      type: "application/pdf",
       isSample: true,
     },
     {
@@ -32,6 +38,18 @@ export default function FilesPage() {
       type: "video/mp4",
       isSample: true,
     },
+    {
+      name: "RPA เบื้องต้น",
+      url: "/uploads/chapter1/RPA เบื้องต้น.pdf",
+      type: "application/pdf",
+      isSample: true,
+    },
+    {
+      name: "กฎหมายแรงงาน",
+      url: "/uploads/chapter1/กฎหมายแรงงาน.pdf",
+      type: "application/pdf",
+      isSample: true,
+    },   
   ];
 
   /* ================== State ================== */
