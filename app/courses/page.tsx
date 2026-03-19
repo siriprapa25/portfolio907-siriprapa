@@ -92,7 +92,7 @@ export default function CoursesPage() {
 
         {/* บทเรียนที่ 4 */}
         <Link
-          href="/chapter/2"
+          href="/chapter/4"
           className="block hover:scale-105 transition-transform"
         >
           <ChapterCard title="บทเรียนที่ 4">
@@ -104,7 +104,7 @@ export default function CoursesPage() {
 
         {/* บทเรียนที่ 5 */}
         <Link
-          href="/chapter/2"
+          href="/chapter/5"
           className="block hover:scale-105 transition-transform"
         >
           <ChapterCard title="บทเรียนที่ 5">
@@ -116,7 +116,7 @@ export default function CoursesPage() {
 
        {/* บทเรียนที่ 6 */}
         <Link
-          href="/chapter/2"
+          href="/chapter/6"
           className="block hover:scale-105 transition-transform"
         >
           <ChapterCard title="บทเรียนที่ 6">
@@ -128,7 +128,7 @@ export default function CoursesPage() {
 
         {/* บทเรียนที่ 7 */}
         <Link
-          href="/chapter/2"
+          href="/chapter/7"
           className="block hover:scale-105 transition-transform"
         >
           <ChapterCard title="บทเรียนที่ 7">

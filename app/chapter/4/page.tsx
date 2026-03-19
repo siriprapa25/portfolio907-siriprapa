@@ -16,19 +16,19 @@ export default function FilesPage() {
   /* ================== ไฟล์ตัวอย่าง ================== */
   const sampleFiles: FileItem[] = [
     {
-      name: "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยีสารสนเทศ",
-      url: "/uploads/chapter1/คำอธิอบายรายวิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยี.pdf",
+      name: "ประเภทของหน่วยงาน",
+      url: "/uploads/chapter4/ประเภทของหน่วยงาน.pdf",
       type: "application/pdf",
     },
-     {
-      name: "การต่อวงจรไฟฟ้า",
-      url: "/uploads/chapter1/การต่อวงจรไฟฟ้า.pdf",
+    {
+      name: "กฎหมายแรงงาน",
+      url: "/uploads/chapter4/กฎหมายแรงงาน.pdf",
       type: "application/pdf",
     },
-        {
-      name: "วิดีโอสื่อการสอนการต่อวงจรไฟฟ้า",
-      url: "/uploads/chapter1/video.mp4",
-      type: "video/mp4",
+    {
+      name: "การประกันตนประกันสังคม",
+      url: "/uploads/chapter4/การประกันตนประกันสังคม.pdf",
+      type: "application/pdf",
     }
   ];
 
@@ -88,7 +88,7 @@ export default function FilesPage() {
             ไฟล์งานและสื่อประกอบการเรียน
           </h1>
            <p className="relative mt-2 text-sm text-black/45 font-medium tracking-widest uppercase">
-            บทเรียนที่ 1 ความรู้พื้นฐานเกี่ยวกับการฝึกประสบการณ์วิชาชีพ
+            บทเรียนที่ 4 คุณธรรม จริยธรรม และกฎหมายแรงงานที่เกี่ยวข้อง
           </p>
         </div>
       </div>

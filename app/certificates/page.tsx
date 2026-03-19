@@ -17,21 +17,21 @@ interface Certificate {
 const certificates: Certificate[] = [
   {
     id: '1',
-    title: 'React Advanced Patterns',
+    title: 'MarTech Consultant to Enhance Lanna Craft Business',
     image: "/certificates/cert1.png",
-    date: 'January 2024',
+    date: 'October 2023',
   },
   {
     id: '2',
-    title: 'Full Stack',
+    title: 'พลิกไปเดียธุรกิจ เส้นทางผู้ประกอบการยุคดิจิทัล',
     image: "/certificates/cert2.png",
-    date: 'January 2024',
+    date: 'August 2025',
   },
   {
     id: '3',
-    title: 'UI/UX Design Fundamentals',
+    title: 'Artificial Intelligence Ethics',
     image: "/certificates/cert3.png",
-    date: 'November 2023',
+    date: 'August 2025',
   },
 ];
 
@@ -103,34 +103,7 @@ export default function CertificatesPage() {
         </div>
       )}
 
-      {/* Stats Section */}
-      <section className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              Learning Journey
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <ChapterCard title="Total Certificates" variant="highlight">
-                <p className="text-4xl font-bold text-primary text-center">
-                  {certificates.length}
-                </p>
-              </ChapterCard>
-              <ChapterCard title="Years Active" variant="highlight">
-                <p className="text-4xl font-bold text-primary text-center">
-                  2+
-                </p>
-              </ChapterCard>
-              <ChapterCard title="Skills Gained" variant="highlight">
-                <p className="text-4xl font-bold text-primary text-center">
-                  10+
-                </p>
-              </ChapterCard>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center">

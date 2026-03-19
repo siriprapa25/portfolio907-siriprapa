@@ -16,20 +16,75 @@ export default function FilesPage() {
   /* ================== ไฟล์ตัวอย่าง ================== */
   const sampleFiles: FileItem[] = [
     {
-      name: "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยีสารสนเทศ",
+      name: "คำอธิอบายรายวิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยี",
       url: "/uploads/chapter1/คำอธิอบายรายวิชาการเตรียมความพร้อมฝึกประสบการณ์วิชาชีพทางเทคโนโลยี.pdf",
       type: "application/pdf",
     },
-     {
+    {
+      name: "การเตรียมความพร้อมฝึกประสบการณ์วิชาชีพ",
+      url: "/uploads/chapter1/02-เตรียมความพร้อมฝึกประสบการณ์วิชาชีพ WiFi.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "ประเภทของหน่วยงาน",
+      url: "/uploads/chapter1/ประเภทของหน่วยงาน.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "วิดีโอสื่อการสอนการต่อวงจรไฟฟ้า",
+      url: "/uploads/chapter1/video.mp4",
+      type: "video/mp4",
+    },
+    {
       name: "การต่อวงจรไฟฟ้า",
       url: "/uploads/chapter1/การต่อวงจรไฟฟ้า.pdf",
       type: "application/pdf",
     },
-        {
-      name: "วิดีโอสื่อการสอนการต่อวงจรไฟฟ้า",
-      url: "/uploads/chapter1/video.mp4",
-      type: "video/mp4",
-    }
+    {
+      name: "กฎหมายแรงงาน",
+      url: "/uploads/chapter4/กฎหมายแรงงาน.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "การประกันตนประกันสังคม",
+      url: "/uploads/chapter4/การประกันตนประกันสังคม.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "ฐานข้อมูลฝึกประสบการณ์",
+      url: "/uploads/chapter3/ฐานข้อมูลฝึกประสบการณ์.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "พื้นฐานการใช้งาน Ubuntu Serve WebServer Database Mysql",
+      url: "/uploads/chapter3/พื้นฐานการใช้งาน Ubuntu Serve WebServer Database Mysql.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "ขั้นตอนการเขียน next js + mysql + orm prisma + axios",
+      url: "/uploads/chapter3/ขั้นตอนการเขียน next js + mysql + orm prisma + axios.pdf",
+      type: "application/pdf",
+    },  
+     {
+      name: "สอบพื้นฐานการเขียนโปรแกรมป้อนแม่สูตรคูณ",
+      url: "/uploads/chapter3/สอบพื้นฐานการเขียนโปรแกรมป้อนแม่สูตรคูณ.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "การออกแบบฐานข้อมูล ระบบหนังสือ",
+      url: "/uploads/chapter3/การออกแบบฐานข้อมูล ระบบหนังสือ.pdf",
+      type: "application/pdf",
+    },  
+    {
+      name: "เรซูเม่ภาษาอังกฤษ",
+      url: "/uploads/chapter2/resumeeng.pdf",
+      type: "application/pdf",
+    },
+    {
+      name: "เรซูเม่ภาษาไทย",
+      url: "/uploads/chapter2/resumetha.pdf",
+      type: "application/pdf",
+    } 
   ];
 
   const [files, setFiles] = useState<FileItem[]>([]);
@@ -88,7 +143,7 @@ export default function FilesPage() {
             ไฟล์งานและสื่อประกอบการเรียน
           </h1>
            <p className="relative mt-2 text-sm text-black/45 font-medium tracking-widest uppercase">
-            บทเรียนที่ 1 ความรู้พื้นฐานเกี่ยวกับการฝึกประสบการณ์วิชาชีพ
+            บทเรียนที่ 5 การจัดกิจกรรม 5ส และมาตรฐานความปลอดภัย
           </p>
         </div>
       </div>

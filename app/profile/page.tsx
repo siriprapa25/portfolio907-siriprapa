@@ -221,7 +221,7 @@ export default function ProfilePage() {
               <h3 className="text-2xl font-bold text-foreground mb-6">Technical Skills</h3>
               <ChapterCard title="Tools & Technologies" variant="highlight">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {['Git', 'Figma', 'Canva', 'Next.js', 'Word', 'Excel', 'Power BI','MongoDB', 'PostgreSQL'].map((skill) => (
+                  {['Git', 'Figma', 'Canva', 'Next.js', 'Word', 'Excel'].map((skill) => (
                     <div
                       key={skill}
                       className="px-4 py-2 rounded-lg bg-primary/10 text-primary font-medium text-center"
@@ -230,26 +230,6 @@ export default function ProfilePage() {
                     </div>
                   ))}
                 </div>
-              </ChapterCard>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hobbies Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Hobbies & Interests</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <ChapterCard title="Open Source">
-                Contributing to open-source projects and building tools for the community.
-              </ChapterCard>
-              <ChapterCard title="Tech Writing">
-                Sharing knowledge through blog posts and technical articles.
-              </ChapterCard>
-              <ChapterCard title="Gaming">
-                Enjoying video games and exploring game development.
               </ChapterCard>
             </div>
           </div>
