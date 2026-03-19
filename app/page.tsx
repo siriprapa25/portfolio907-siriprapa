@@ -37,7 +37,7 @@ export default function ProfilePage() {
             </h1>
 
             <p className="text-xl text-foreground/70 mb-8">
-              Full Stack Developer & Designer
+             BSCCT907_Preparing for Information Technology Internship
             </p>
 
             <p className="text-lg text-foreground/60 mb-12 max-w-2xl mx-auto">
